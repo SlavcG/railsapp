@@ -1,14 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Railsapp</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <title>Myapp</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <!--navbar starts here-->
+  <nav class="navbar navbar-default">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle" data-target=".navbar-ex1-collapse" data-toggle="collapse" type="button">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div><!-- Collect the nav links, forms, and other content for toggling -->
 
-<%= yield %>
+      <div class="collapse navbar-collapse navbar-ex1-collapse mynav">
+        <ul class="nav navbar-nav">
+          <li><a href="/static_pages/index">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="/products">Products</a></li>
+          <li><a href="/orders">Orders</a></li>
+       </ul>
+      </div><!-- /.navbar-collapse -->
+    </div>
+  </nav>
 
-</body>
+  <%= yield %>
+
+  <footer>
+    <div class="container-fluid foot">
+      &copy; Slavko Galic 2016
+    </div>
+  </footer>
+ </body>
 </html>
