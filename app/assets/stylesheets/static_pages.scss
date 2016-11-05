@@ -45,6 +45,16 @@ h1 {
     margin: 0 auto;
 }
 
+.carousel .item {
+    width: 100%; /*slider width*/
+    height: 100%; /*slider height*/
+}
+
+.block {
+  height: 700px;
+}
+
+
 #lp {
   margin-bottom: 50px;
 }
