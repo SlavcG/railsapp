@@ -27,11 +27,11 @@
 
       <div class="collapse navbar-collapse navbar-ex1-collapse mynav">
         <ul class="nav navbar-nav">
-          <li><a href="/static_pages/index">Home</a></li>
+          <li><<%= link_to "Home", static_pages_landing_page_path %></li>
           <li><a href="#">About</a></li>
           <li><a href="#">Contact</a></li>
-          <li><a href="/products">Products</a></li>
-          <li><a href="/orders">Orders</a></li>
+          <li><%= link_to "Products", products_path %></li>
+          <li><%= link_to "Orders", orders_path %></li>
        </ul>
       </div><!-- /.navbar-collapse -->
     </div>
