@@ -19,4 +19,7 @@ Rails.application.routes.draw do
   post 'static_pages/thank_you'
 
   resources :orders, only: [:index, :show, :create, :destroy]
+
+  mount ActionCable.server => '/cable'
+
 end
