@@ -26,8 +26,13 @@ class PaymentsController < ApplicationController
       flash[:error] = "Unfortunately, there was an error processing your payment: #{err[:message]}"
     end
 
-    redirect_to product_path(@product)
+    redirect_to products_path(@product)
 
   end
+
+  private
+    def payment_params
+      params.require(:payment).permit()
+    end
 
 end

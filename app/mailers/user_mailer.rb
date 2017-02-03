@@ -14,4 +14,14 @@ class UserMailer < ApplicationMailer
 		@message = params[:message]
 		UserMailer.contact_form(@email, @name, @message).deliver_now
 	end
+
+  def paid_success(user, product)
+    @user = user
+    @product = product
+    mail(
+      :from => 'slavkogalich@gmail.com',
+      :to => @user.email,
+      :subject => "Order and Payment confirmation"
+      )
+    end
 end
