@@ -15,11 +15,15 @@ Rails.application.routes.draw do
   get 'static_pages/landing_page'
 
   root 'products#index'
+  
+	get 'static_pages/thank_you'
 
   post 'static_pages/thank_you'
 
   resources :orders, only: [:index, :show, :create, :destroy]
 
   mount ActionCable.server => '/cable'
+
+  resources :payments
 
 end
