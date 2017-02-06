@@ -15,7 +15,7 @@ class PaymentsController < ApplicationController
 
       if charge.paid
         Order.create!(product_id: @product.id, user_id: @user_id, total: @product.price)
-        UserMailer.paid_order(@user, @product).deliver_now
+        UserMailer.paid_success(@user, @product).deliver_now
         flash[:success] = "Payment was successful."
       end
 
